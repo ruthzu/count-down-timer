@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .perspective {
+    perspective: 1000px;
+  }
+
+  .flip-card {
+    transform-origin: bottom;
+    animation: flipCard 0.6s ease-in forwards;
+    backface-visibility: hidden;
+  }
+
+  .flip-card-next {
+    transform-origin: top;
+    animation: flipCardNext 0.6s ease-out forwards;
+    backface-visibility: hidden;
+  }
+
+  @keyframes flipCard {
+    0% { transform: rotateX(0deg); }
+    100% { transform: rotateX(-90deg); }
+  }
+
+  @keyframes flipCardNext {
+    0% { transform: rotateX(90deg); }
+    100% { transform: rotateX(0deg); }
+  }
+}
+
+
+
+
+
